@@ -55,4 +55,7 @@ app.use("/tasks", require("./routes/tasks"));
 //   return res.json(delUser);
 // });
 
-app.listen(3000, () => console.log(`server running in port 3000`));
+const PORT = process.env.PORT || 3000;
+const server = app.listen(PORT, () => {
+  console.log(`app running on port ${PORT}`);
+});
