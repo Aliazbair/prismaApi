@@ -10,8 +10,8 @@ app.use(express.json());
 // setup route
 // home page
 // app.use("/", (req, res) => res.send("<h1>home page</h1>"));
-app.use("api/users", require("./routes/user"));
-app.use("api/tasks", require("./routes/tasks"));
+app.use("/api/users", require("./routes/user"));
+app.use("/api/tasks", require("./routes/tasks"));
 
 // create get all user route
 // app.get("/", async (req, res) => {
